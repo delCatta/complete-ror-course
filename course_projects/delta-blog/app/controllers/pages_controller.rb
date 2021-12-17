@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
-  def home; end
+  def home
+    @articles = Article.last(3)
+  end
 
   def about; end
 end

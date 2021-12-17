@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.deltaBlog {
+    @apply text-5xl;
+}
+h1 {
+    @apply text-3xl;
+}

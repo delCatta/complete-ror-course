@@ -1,3 +1,3 @@
 <% flash.each do |name,message|  %>
-  <%= message %>
+  <%= render 'shared/alerts/success' ,{message: message}%>
 <%end %>

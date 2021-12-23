@@ -34,7 +34,7 @@
                 <%= f.label :description ,class:"font-semibold text-gray-600 py-2"%>
                 <%= f.text_area :description,class:"w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4" ,placeholder:"Enter your article's Description." ,spellcheck:"false" %>
               </div>
-              <div class="mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
+              <div class="mt-5 text-center md:space-x-3 md:block flex flex-col-reverse">
                 <%= f.submit title, disable_with: 'Submiting...',class: "btn-submit"%>
                 <%= link_to 'Cancel', articles_path , class:"btn-cancel"%>
               </div>

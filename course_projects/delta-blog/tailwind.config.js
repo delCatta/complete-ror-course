@@ -5,9 +5,4 @@ module.exports = {
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js'
   ],
-  theme:{
-    borderRadius:{
-      lg: '50px',
-    }
-  }
 }

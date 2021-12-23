@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.deltaBlog {
+@layer components {
+  .deltaBlog {
     @apply text-5xl;
-}
-h1 {
+  }
+  h1 {
     @apply text-3xl;
+  }
+
+  
+
+  .btn-danger{
+    @apply my-2 mx-1 md:mb-0 bg-white px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-red-600 rounded-md hover:shadow-lg hover:bg-red-100;
+  }
+  .btn-primary{
+    @apply my-2 mx-1 md:mb-0 bg-white px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-teal-600 rounded-md hover:shadow-lg hover:bg-teal-100;
+  }
+  .btn-cancel{
+    @apply my-2 mx-1 md:mb-0 bg-white px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-md hover:shadow-lg hover:bg-gray-100;
+  }
+  .btn-submit{
+    @apply my-2 mx-1 md:mb-0 bg-teal-400 px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-white rounded-md hover:shadow-lg hover:bg-teal-500;
+  }
 }

@@ -18,19 +18,17 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notice] = "Article was created successfully."
-      redirect_to @article
+      redirect_to article_url(@article), notice: "Article was successfully created." 
     else
-      render 'new', status: :unprocessable_entity
+      render :new, status: :unprocessable_entity 
     end
   end
 
   def update
     if @article.update(article_params)
-      flash[:notice] = "Article was updated successfully."
-      redirect_to @article
+      redirect_to article_url(@article), notice: "Article was successfully updated." 
     else
-      render 'edit', status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 

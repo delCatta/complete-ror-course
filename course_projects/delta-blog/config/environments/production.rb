@@ -116,4 +116,5 @@ Rails.application.configure do
   # config.active_record.shard_selector = { lock: true }
   # config.active_record.shard_resolver = ->(request) { Tenant.find_by!(host: request.host).shard }
   config.hosts << 'blog.catta.dev'
+  config.hosts << 'ror-blog.admin.catta.dev'
 end

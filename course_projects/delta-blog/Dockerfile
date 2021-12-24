@@ -1,4 +1,4 @@
-FROM ruby:3.0.2
+FROM quay.io/evl.ms/fullstaq-ruby:3.0.3-jemalloc-bullseye-slim
 
 WORKDIR /usr/src/app
 

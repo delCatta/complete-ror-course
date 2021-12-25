@@ -1,5 +1,5 @@
-<% if @article.errors.any? %>
-    <% @article.errors.full_messages.each do |m|%>
+<% if obj.errors.any? %>
+    <% obj.errors.full_messages.each do |m|%>
         <%= render 'shared/alerts/danger' , {message: m}%>
     <% end %>
 <% end %>

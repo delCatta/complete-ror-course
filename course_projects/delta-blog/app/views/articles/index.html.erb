@@ -4,7 +4,5 @@
     <div class="flex-grow"></div>
     <%= link_to 'Create new Article', new_article_path, class: 'btn-primary py-2'%>
   </div>
-  <% @articles.each do |article| %>
-    <%= render partial: 'listing-card', locals: {article: article}%>
-  <% end %>
+  <%= render 'articles/article' %>
 </div>

@@ -1,8 +1,12 @@
 
 <%= gravatar_for @user, size: 200 %>
-<h1 class="text-center mt-4"><%= @user.username %>'s Profile</h1>
+<div class="flex flex-col justify-center items-center w-full mt-4">
+<h1 class=""><%= @user.username %>'s Profile</h1>
+<%= link_to 'Edit your profile ', edit_user_path(@user), class: "btn-primary w-400 text-center min-w-200" %>
+</div>
 
 <h3 class="m-8 deltaBlog">Articles</h3>
 
 <%= render 'articles/article' %>
+<%= render 'shared/pagination/apple', object: @articles %>
 

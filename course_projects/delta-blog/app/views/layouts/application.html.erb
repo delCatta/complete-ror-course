@@ -10,7 +10,9 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <%= render 'layouts/messages' %>
+    <turbo-frame id="flash">
+      <%= render 'layouts/messages' %>
+      </turbo-frame>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

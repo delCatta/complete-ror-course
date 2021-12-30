@@ -1,3 +1,4 @@
 <% @users.each do |user| %>
     <%= render partial: 'users/listing-card', locals: {user: user}%>
   <% end %>
+<%= render 'shared/pagination/apple', object: @users %>

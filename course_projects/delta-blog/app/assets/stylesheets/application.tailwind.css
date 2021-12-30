@@ -10,18 +10,51 @@
     @apply text-3xl;
   }
 
-  
-
-  .btn-danger{
+  .btn-danger {
     @apply my-2 mx-1 md:mb-0 bg-white px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-red-600 rounded-md hover:shadow-lg hover:bg-red-100;
   }
-  .btn-primary{
+  .btn-primary {
     @apply my-2 mx-1 md:mb-0 bg-white px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-teal-600 rounded-md hover:shadow-lg hover:bg-teal-100;
   }
-  .btn-cancel{
+  .btn-cancel {
     @apply my-2 mx-1 md:mb-0 bg-white px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-md hover:shadow-lg hover:bg-gray-100;
   }
-  .btn-submit{
+  .btn-submit {
     @apply my-2 mx-1 md:mb-0 bg-teal-400 px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-white rounded-md hover:shadow-lg hover:bg-teal-500;
   }
+}
+
+/* Apple Pagination */
+.apple_pagination {
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
+.apple_pagination a,
+.apple_pagination span {
+  padding: 0.2em 0.3em;
+}
+.apple_pagination .disabled {
+  color: #aaaaaa;
+}
+.apple_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #ccfbf1;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 0.5em; 
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+.apple_pagination a {
+  text-decoration: none;
+  color: black;
+}
+.apple_pagination a:hover,
+.apple_pagination a:focus {
+  text-decoration: underline;
 }

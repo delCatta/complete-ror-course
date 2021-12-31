@@ -22,6 +22,12 @@
   .btn-submit {
     @apply my-2 mx-1 md:mb-0 bg-teal-400 px-5 py-1 text-sm shadow-sm font-medium tracking-wider border text-white rounded-md hover:shadow-lg hover:bg-teal-500;
   }
+  .btn-login {
+    @apply bg-teal-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-white rounded-[10px] hover:shadow-lg hover:bg-teal-500;
+  }
+  .btn-logout {
+    @apply bg-red-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-white rounded-[10px] hover:shadow-lg hover:bg-red-500;
+  }
 }
 
 /* Apple Pagination */

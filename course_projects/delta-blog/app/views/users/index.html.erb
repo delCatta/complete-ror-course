@@ -1,4 +1,6 @@
-<% @users.each do |user| %>
-    <%= render partial: 'users/listing-card', locals: {user: user}%>
-  <% end %>
+<div class="p-8 mb-4">
+<h1 class="font-bold deltaBlog">Bloggers</h1>
+</div>
+
+<%= render partial: 'users/listing-card'%>
 <%= render 'shared/pagination/apple', object: @users %>

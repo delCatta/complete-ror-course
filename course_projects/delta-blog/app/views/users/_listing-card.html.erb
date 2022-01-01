@@ -1,3 +1,5 @@
+<div class="lg:grid lg:grid-cols-3">
 <% @users.each do |user| %>
     <%= render partial: 'users/card', locals: {user: user}%>
 <% end %>
+</div>

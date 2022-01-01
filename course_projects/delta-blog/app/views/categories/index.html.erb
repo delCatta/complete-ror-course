@@ -1,11 +1,9 @@
-<div class="p-8">
-  <div class="flex">
+<div class="p-4 lg:p-8">
+  <div class="flex items-center mb-8">
   
-  <% if logged_in? && current_user.admin? %>
-    <h1 class="font-bold deltaBlog">Categories listing page</h1>
-  <% end %>
+      <h1 class="font-bold deltaBlog">Categories</h1>
     <div class="flex-grow"></div>
-    <% if logged_in? %>
+    <% if logged_in? && current_user.admin? %>
       <%= link_to 'Create new Category', new_category_path, class: 'btn-primary py-2'%>
     <% end %>
   </div>

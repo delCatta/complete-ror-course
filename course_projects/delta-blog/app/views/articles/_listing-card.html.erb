@@ -1,3 +1,5 @@
+<div class="lg:grid lg:grid-cols-2">
 <% @articles.each do |article| %>
     <%= render partial: 'articles/card', locals: {article: article}%>
 <% end %>
+</div>

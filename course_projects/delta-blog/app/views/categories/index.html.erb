@@ -1,0 +1,11 @@
+<div class="p-8">
+  <div class="flex">
+    <h1 class="font-bold deltaBlog">Categories listing page</h1>
+    <div class="flex-grow"></div>
+    <% if logged_in? %>
+      <%= link_to 'Create new Category', new_category_path, class: 'btn-primary py-2'%>
+    <% end %>
+  </div>
+  <%= render 'categories/category' %>
+  <%= render 'shared/pagination/apple', object: @categories %>
+</div>

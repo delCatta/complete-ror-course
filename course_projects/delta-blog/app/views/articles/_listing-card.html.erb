@@ -2,8 +2,13 @@
   <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://cdn.pixabay.com/photo/2010/12/13/10/05/berries-2277_640.jpg')" title="Woman holding a mug">
   </div>
   <div class="border-r lg:w-1/2 border-b border-l border-gray-200 lg:border-l-0 lg:border-t lg:border-gray-200 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <div class="text-gray-900 font-bold text-xl mb-2"><%= link_to article.title.capitalize, article_path(article) %></div>
+    <div class="flex mb-2">
+      <%= render article.categories if article.categories.any?%>
+    </div>
+    <div class=" ml-1 mb-8">
+      <div class="text-gray-900 font-bold text-xl mb-2 flex flex-col">
+        <%= link_to article.title.capitalize, article_path(article) %>
+      </div>
       <p class="text-gray-700 lg:w-1/2 text-base"><%= article.description.capitalize %></p>
     </div>
     <div class="flex items-center">

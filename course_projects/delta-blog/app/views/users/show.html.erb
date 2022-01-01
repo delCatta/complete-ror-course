@@ -6,6 +6,9 @@
 <%= link_to 'Edit your profile ', edit_user_path(@user), class: "btn-primary w-400 text-center min-w-200" %>
 <%= button_to 'Delete your profile ', user_path(@user), class: "btn-danger w-400 text-center min-w-200", method: :delete %>
 <% end %>
+<% if logged_in? && current_user.admin? %>
+<%= button_to 'Delete profile ', user_path(@user), class: "btn-danger w-400 text-center min-w-200", method: :delete %>
+<% end %>
 </div>
 
 <h3 class="m-8 deltaBlog">Articles</h3>

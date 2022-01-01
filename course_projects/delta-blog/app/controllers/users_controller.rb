@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       end
       def destroy
         @user.destroy
-        session[:user_id] = nil
+        session[:user_id] = nil if @user == current_user
         flash[:notice] = "We're sorry to see you go... Have a nice time and you're always welcome."
         redirect_to root_path
       end 
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
       end
       def require_same_user
-        if current_user!= @user
+        if current_user!= @user && !current_user.admin?
           flash[:alert]= "You can only do that on your own account."
           redirect_to @user
         end

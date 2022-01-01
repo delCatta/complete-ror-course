@@ -16,7 +16,7 @@
       </div>
       <div class="flex-grow"></div>
       
-      <% if logged_in? && article.user == current_user %>
+      <% if logged_in? && (article.user == current_user || current_user.admin?)%>
           <%= link_to 'Edit', edit_article_path(article) ,class:"btn-primary"%>
         <%= button_to 'Delete', article, method: :delete,class:"btn-danger"%>
       <% end %>

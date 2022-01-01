@@ -37,7 +37,6 @@
 
               <div class="flex-auto w-full mb-1 text-xs space-y-2">
                 <%= f.label :categories ,class:"font-semibold text-gray-600 py-2" %>
-                <%# <%= f.text_area :description,class:"w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4" ,placeholder:"Enter your article's Description." ,spellcheck:"false" %>
                   <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {prompt: "None"}, {multiple: true,size:3,class: "w-full appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg py-4 px-4"}%>
               </div>
 

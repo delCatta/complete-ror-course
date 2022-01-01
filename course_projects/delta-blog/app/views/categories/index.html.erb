@@ -9,6 +9,6 @@
       <%= link_to 'Create new Category', new_category_path, class: 'btn-primary py-2'%>
     <% end %>
   </div>
-  <%= render 'categories/card' %>
+  <%= render 'categories/listing-card' %>
   <%= render 'shared/pagination/apple', object: @categories %>
 </div>

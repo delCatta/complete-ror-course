@@ -1,3 +1,13 @@
-<%= render partial: 'listing-card', locals: {category: @category}%>
+<div class="p-8 mb-4 flex">
+    <h1 class="font-bold deltaBlog"><%= @category.name %> Articles</h1>
+    <div class="flex-grow"></div>
+    <% if logged_in? && current_user.admin? %>
+        <%= link_to 'Edit Category', edit_category_path(@category), class: "btn-primary w-400 text-center min-w-200"  %>
+    <% end %>
+</div>
+
+  <%= render 'articles/listing-card' %>
+  <%= render 'shared/pagination/apple', object: @articles %>
 <div class="m-8">
-  <%= link_to 'Return to Categories Listing', categories_path ,class:"btn-cancel"%></div>
+  <%= link_to 'Return to Categories Listing', categories_path ,class:"btn-cancel"%>
+</div>

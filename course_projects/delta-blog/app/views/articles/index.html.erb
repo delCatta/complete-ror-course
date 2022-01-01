@@ -6,6 +6,6 @@
       <%= link_to 'Create new Article', new_article_path, class: 'btn-primary py-2'%>
     <% end %>
   </div>
-  <%= render 'articles/article' %>
+  <%= render 'articles/listing-card' %>
   <%= render 'shared/pagination/apple', object: @articles %>
 </div>

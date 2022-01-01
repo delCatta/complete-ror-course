@@ -15,8 +15,12 @@
         <p class="text-gray-600"><%= time_ago_in_words article.updated_at %> ago</p>
       </div>
       <div class="flex-grow"></div>
-        <%= link_to 'Edit', edit_article_path(article) ,class:"btn-primary"%>
+      
+      <% if logged_in? && article.user == current_user %>
+          <%= link_to 'Edit', edit_article_path(article) ,class:"btn-primary"%>
         <%= button_to 'Delete', article, method: :delete,class:"btn-danger"%>
+      <% end %>
+      
     </div>
   </div>
 </div>

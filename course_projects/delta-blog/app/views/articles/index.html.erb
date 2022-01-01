@@ -2,7 +2,9 @@
   <div class="flex">
     <h1 class="font-bold deltaBlog">Article listing page</h1>
     <div class="flex-grow"></div>
-    <%= link_to 'Create new Article', new_article_path, class: 'btn-primary py-2'%>
+    <% if logged_in? %>
+      <%= link_to 'Create new Article', new_article_path, class: 'btn-primary py-2'%>
+    <% end %>
   </div>
   <%= render 'articles/article' %>
   <%= render 'shared/pagination/apple', object: @articles %>

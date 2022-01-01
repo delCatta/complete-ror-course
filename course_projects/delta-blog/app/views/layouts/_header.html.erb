@@ -18,12 +18,21 @@
       <li class="p-4 border-b-2 border-teal-500 border-opacity-0 hover:border-opacity-100 hover:text-teal-500 duration-200 cursor-pointer active">
         <%= link_to 'About', about_path %>
       </li>
-      <li class="p-4 border-b-2 border-teal-500 border-opacity-0 hover:border-opacity-100 hover:text-teal-500 duration-200 cursor-pointer active">
-        <%= link_to 'Login', login_path , class:"btn-login"%>
+      <% if logged_in? %>
+      <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer active">
+        <%= link_to current_user.username, user_path(current_user) %>
       </li>
-      <li class="p-4 border-b-2 border-red-500 border-opacity-0 hover:border-opacity-100 hover:text-teal-500 duration-200 cursor-pointer active">
-        <%= button_to 'Logout', logout_path,method: :delete , class:"btn-logout"%>
-      </li>
+        <li class="p-4 border-b-2 border-red-500 border-opacity-0 hover:border-opacity-100 hover:text-teal-500 duration-200 cursor-pointer active">
+          <%= button_to 'Logout', logout_path,method: :delete , class:"btn-logout"%>
+        </li>
+      <% else %>
+        <li class="p-4 border-b-2 border-teal-500 border-opacity-0 hover:border-opacity-100 hover:text-teal-500 duration-200 cursor-pointer active">
+          <%= link_to 'Login', login_path , class:"btn-login"%>
+        </li>
+        <li class="p-4 border-b-2 border-teal-500 border-opacity-0 hover:border-opacity-100 hover:text-teal-500 duration-200 cursor-pointer active">
+          <%= link_to 'Signup', signup_path , class:"btn-login"%>
+        </li>
+      <% end %>
     </ul>
   </nav>
   <!-- buttons --->

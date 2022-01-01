@@ -2,7 +2,10 @@
 <%= gravatar_for @user, size: 200 %>
 <div class="flex flex-col justify-center items-center w-full mt-4">
 <h1 class=""><%= @user.username %>'s Profile</h1>
+<% if logged_in? && @user == current_user %>
 <%= link_to 'Edit your profile ', edit_user_path(@user), class: "btn-primary w-400 text-center min-w-200" %>
+<%= button_to 'Delete your profile ', user_path(@user), class: "btn-danger w-400 text-center min-w-200", method: :delete %>
+<% end %>
 </div>
 
 <h3 class="m-8 deltaBlog">Articles</h3>

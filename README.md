@@ -6,5 +6,6 @@ The main branches are running on a Digital Ocean container.
 
 Projects:
 
-- [Delta Blog](delta.delcatta.dev): "Better than Alpha".
-- ...
+- Delta Blog: Better than Alpha.
+- Gamma Chat: Just a Chat.
+<!-- - [Delta Blog](delta.delcatta.dev): "Better than Alpha". -->
